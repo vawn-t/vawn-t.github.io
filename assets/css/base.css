@@ -1,26 +1,50 @@
 @font-face {
-  font-family: HeliveticaNeue;
-  src: url(../assets/fonts/HelveticaNeue/helveticaneue.ttf);
+  font-family: Figtree;
+  src: url(../fonts/Figtree-VariableFont_wght.ttf);
 }
 
 @font-face {
-  font-family: HeliveticaNeueBold;
-  src: url(../assets/fonts/HelveticaNeue/helveticaneuebold.ttf);
+  font-family: FigtreeItalic;
+  src: url(../fonts/Figtree-Italic-VariableFont_wght.ttf);
 }
 
-@font-face {
-  font-family: HeliveticaNeueLight;
-  src: url(../assets/fonts/HelveticaNeue/helveticaneuelight.ttf);
-}
+/*------------------------*\
+ * VARIABLES
+\*------------------------*/
 
 :root {
-  --white-color: #fff;
-  --violet-color: #5250a7;
-  --gray-color: rgb(247, 247, 247);
-  --red-color: rgb(211, 43, 83);
-  --dark-blue-color: rgb(70, 91, 174);
-  --blue-color: #3d9df0;
-  --dark-gray-color: #4a4a4a;
+  /**
+   * colors
+   */
+  --black: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+
+  /**
+    * typography
+    */
+  --ff-figtree: 'Figtree', serif;
+
+  --fs-1: 1rem;
+  --fs-2: 0.75rem;
+
+  --fw-400: 400;
+  --fw-500: 500;
+
+  /**
+    * transition
+    */
+  --transition-1: 0.25s ease-in-out;
+
+  /**
+    * spacing
+    */
+  --section-padding: 80px;
+
+  /**
+    * radius
+    */
+  --radius-primary: 20px;
+  --radius-secondary: 24px;
 }
 
 * {
@@ -28,12 +52,73 @@
 }
 
 html {
-  font-size: 100%;
-  font-family: HeliveticaNeueLight, serif;
   box-sizing: border-box;
+  font-size: 100%;
+  font-family: var(--ff-figtree);
   scroll-behavior: smooth;
 }
 
+body {
+  --card-shadow: rgb(0 0 0 / 6%) 0px 0px 0px 1px inset,
+    rgb(0 0 0 / 4%) 0px 2px 4px 0px;
+  --info-text-color: #a1a1aa;
+  --hover-info-text-color: #b3b3bd;
+  background-color: var(--bg-primary);
+}
+
+/*------------------------*\
+ * THEME COLORS
+\*------------------------*/
+body.dark_theme {
+  --bg-primary: rgb(10, 10, 11);
+  --bg-secondary: rgb(18, 18, 18);
+  --text-color: var(--white);
+  --bg-hover-secondary-hover: rgb(18, 18, 18);
+}
+
+body.light_theme {
+  --bg-primary: var(--white);
+  --bg-secondary: var(--white);
+  --text-color: var(--black);
+  --bg-hover-secondary-hover: rgb(250, 250, 250);
+}
+
+/*------------------------*\
+ * REUSE STYLES
+\*------------------------*/
+
 a {
   text-decoration: none;
+}
+
+.title {
+  color: var(--text-color);
+  font-size: var(--fs-1);
+  font-weight: var(--fw-500);
+}
+
+.subtitle {
+  color: var(--info-text-color);
+  font-size: var(--fs-2);
+  font-weight: var(--fw-500);
+}
+
+.card {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-primary);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card.sub-card {
+  border-radius: var(--radius-secondary);
+}
+
+.card.enable-select {
+  cursor: pointer;
+}
+
+.card.enable-select:hover {
+  background-color: var(--bg-hover-secondary-hover);
 }
