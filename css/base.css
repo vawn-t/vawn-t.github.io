@@ -1,0 +1,39 @@
+@font-face {
+  font-family: HeliveticaNeue;
+  src: url(../assets/fonts/HelveticaNeue/helveticaneue.ttf);
+}
+
+@font-face {
+  font-family: HeliveticaNeueBold;
+  src: url(../assets/fonts/HelveticaNeue/helveticaneuebold.ttf);
+}
+
+@font-face {
+  font-family: HeliveticaNeueLight;
+  src: url(../assets/fonts/HelveticaNeue/helveticaneuelight.ttf);
+}
+
+:root {
+  --white-color: #fff;
+  --violet-color: #5250a7;
+  --gray-color: rgb(247, 247, 247);
+  --red-color: rgb(211, 43, 83);
+  --dark-blue-color: rgb(70, 91, 174);
+  --blue-color: #3d9df0;
+  --dark-gray-color: #4a4a4a;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 100%;
+  font-family: HeliveticaNeueLight, serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
