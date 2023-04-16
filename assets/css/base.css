@@ -122,3 +122,9 @@ a {
 .card.enable-select:hover {
   background-color: var(--bg-hover-secondary-hover);
 }
+
+.box-center {
+  position: fixed;
+  width: 100vw;
+  text-align: center;
+}
