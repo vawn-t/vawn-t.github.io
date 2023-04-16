@@ -1,3 +1,5 @@
+@import url('base.css');
+
 .scroll-wrapper {
   align-items: center;
   display: flex;
@@ -31,4 +33,12 @@ header {
 
 footer {
   bottom: 0;
+}
+
+.switch-theme-wrapper {
+  border-radius: 14px;
+  display: flex;
+  margin-top: 4rem;
+  justify-content: center;
+  gap: 0.5rem;
 }
