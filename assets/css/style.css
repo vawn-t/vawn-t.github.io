@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    overflow: auto;
+  }
+}
+
+.section {
+  flex-shrink: 0;
+  width: 100vw;
+  height: 100vh;
+  font-size: 5em;
+  text-align: center;
+  background-color: #eee;
+  border-right: 1px solid #ccc;
+}

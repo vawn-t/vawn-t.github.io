@@ -69,14 +69,14 @@ body {
 /*------------------------*\
  * THEME COLORS
 \*------------------------*/
-body.dark_theme {
+body.dark-theme {
   --bg-primary: rgb(10, 10, 11);
   --bg-secondary: rgb(18, 18, 18);
   --text-color: var(--white);
   --bg-hover-secondary-hover: rgb(18, 18, 18);
 }
 
-body.light_theme {
+body.light-theme {
   --bg-primary: var(--white);
   --bg-secondary: var(--white);
   --text-color: var(--black);
