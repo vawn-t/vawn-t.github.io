@@ -34,11 +34,31 @@ header {
 footer {
   bottom: 0;
 }
-
 .switch-theme-wrapper {
   border-radius: 14px;
   display: flex;
-  margin-top: 4rem;
+  height: calc((100vh - 35.25rem) / 2);
   justify-content: center;
+  align-items: center;
   gap: 0.5rem;
+}
+
+.switch-btn {
+  background-color: var(--bg-hover-secondary-hover);
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 14px;
+}
+
+.switch-btn a {
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+}
+
+.theme-active {
+  background-color: var(--theme-btn-bg);
+  border-radius: 8px;
+  box-shadow: var(--theme-btn-shadow);
 }

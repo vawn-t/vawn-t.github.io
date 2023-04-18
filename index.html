@@ -15,25 +15,27 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body class="light_theme">
+  <body class="light-theme">
     <div class="scroll-wrapper">
       <!-- SWITCH THEME BUTTON -->
       <header class="box-center">
         <nav class="switch-theme-wrapper">
-          <a href="#"
-            ><img
-              src="assets/images/icons/sun-enabled.svg"
-              alt="day icon"
-              srcset=""
-            />
-          </a>
-          <a href="#"
-            ><img
-              src="assets/images/icons/moon-disabled.svg"
-              alt="night icon"
-              srcset=""
-            />
-          </a>
+          <div class="switch-btn">
+            <a id="light-mode" href="#" class="theme-active">
+              <img
+                src="assets/images/icons/sun-enabled.svg"
+                alt="day icon"
+                srcset=""
+              />
+            </a>
+            <a id="dark-mode" class="" href="#">
+              <img
+                src="assets/images/icons/moon-disabled.svg"
+                alt="night icon"
+                srcset=""
+              />
+            </a>
+          </div>
         </nav>
       </header>
 
