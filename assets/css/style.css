@@ -28,13 +28,11 @@
 }
 
 .section {
-  background-color: #eee;
+  background-color: var(--white);
   border-right: 1px solid #ccc;
   border-radius: 24px;
   box-shadow: var(--theme-shadow);
   flex-shrink: 0;
-  font-size: 5em;
-  text-align: center;
 }
 
 header {
@@ -79,4 +77,48 @@ footer {
 
 .secondary-section {
   padding: 16px;
+}
+
+/* MAIN SECTION */
+.vawn-wrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.vawn-img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.vawn-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.vawn-name {
+  font-size: 1rem;
+  font-weight: var(--fw-600);
+}
+
+.vawn-status {
+  display: flex;
+  gap: 8px;
+}
+
+.vawn-mode {
+  color: var(--info-text-color);
+  font-size: 0.85rem;
+  font-weight: var(--fw-500);
+}
+
+.green-light {
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background-color: rgb(52 211 153);
+  height: 8px;
+  width: 8px;
+  will-change: auto;
 }
