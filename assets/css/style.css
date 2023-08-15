@@ -72,7 +72,11 @@ footer {
 }
 
 .primary-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 24px;
+  width: 700px;
 }
 
 .secondary-section {
@@ -82,7 +86,13 @@ footer {
 /* MAIN SECTION */
 .vawn-wrapper {
   display: flex;
-  gap: 12px;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.vawn-info {
+  display: flex;
+  gap: 16px;
 }
 
 .vawn-img {
@@ -105,7 +115,7 @@ footer {
 
 .vawn-status {
   display: flex;
-  gap: 8px;
+  gap: 4px;
 }
 
 .vawn-mode {
@@ -121,4 +131,27 @@ footer {
   height: 8px;
   width: 8px;
   will-change: auto;
+}
+
+.intro-content-wrapper {
+  width: 100%;
+}
+
+.intro-content {
+  font-size: 1.75rem;
+  letter-spacing: 1px;
+  line-height: 35px;
+}
+
+.location {
+  padding-bottom: 4px;
+}
+
+.sub-location {
+  font-size: 0.5rem;
+}
+
+.time-zone {
+  color: var(--info-text-color);
+  margin-top: 4px;
 }
