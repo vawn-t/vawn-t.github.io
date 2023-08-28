@@ -7,18 +7,6 @@
   overflow: hidden;
 }
 
-@media only screen and (max-width: 480px) {
-  .scroll-wrapper {
-    height: 100dvh;
-  }
-}
-
-@media (max-width: 768px) {
-  .scroll-wrapper {
-    overflow: auto;
-  }
-}
-
 .main-wrapper {
   display: flex;
   height: 100%;
@@ -164,4 +152,22 @@ footer {
   z-index: 1;
   right: -150px;
   bottom: -150px;
+}
+
+@media only screen and (max-width: 480px) {
+  .scroll-wrapper {
+    height: 100dvh;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-wrapper {
+    overflow: auto;
+  }
+}
+
+@media only screen and (max-width: 1439px) {
+  .primary-section {
+    width: 550px;
+  }
 }
