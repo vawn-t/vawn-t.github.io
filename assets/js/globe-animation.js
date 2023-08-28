@@ -56,6 +56,7 @@ const handlePointerOut = () => {
 };
 
 const handlePointerMove = (e) => {
+  canvas.style.cursor = 'grab';
   if (e.buttons == 1) {
     pointerInteractionMovement = e.clientX - pointerInteract;
   }

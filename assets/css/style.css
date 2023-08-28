@@ -75,7 +75,9 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
   padding: 24px;
+  position: relative;
   width: 700px;
 }
 
@@ -154,4 +156,12 @@ footer {
 .time-zone {
   color: var(--info-text-color);
   margin-top: 4px;
+}
+
+/* GLOBAL SECTION */
+.global-wrapper {
+  position: absolute;
+  z-index: 1;
+  right: -150px;
+  bottom: -150px;
 }
