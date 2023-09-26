@@ -11,12 +11,17 @@ let pointerInteractionMovement = 0;
 
 let canvas = document.getElementById('cobe');
 
+// TODO: Get current theme active
+// const themeActive = document.querySelector('.theme-active');
+
 const globe = createGlobe(canvas, {
   devicePixelRatio: 2,
   width: 1000,
   height: 1000,
   phi: 0,
   theta: 0,
+
+  // TODO: Handle dark mode
   dark: 0,
   diffuse: 1.2,
   scale: 1,

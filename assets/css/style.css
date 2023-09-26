@@ -22,7 +22,7 @@
 
 .section a {
   border-radius: 24px;
-  border-right: 1px solid #ccc;
+  border-right: 1px solid var(--theme-shadow);
   box-shadow: var(--theme-shadow);
 }
 
@@ -63,8 +63,9 @@ footer {
 }
 
 .primary-section {
+  background-color: var(--bg-secondary);
   border-radius: 24px;
-  border-right: 1px solid #ccc;
+  border-right: 1px solid var(--theme-shadow);
   box-shadow: var(--theme-shadow);
   display: flex;
   flex-direction: column;
@@ -101,6 +102,7 @@ footer {
 }
 
 .vawn-name {
+  color: var(--text-color);
   font-size: 1rem;
   font-weight: var(--fw-600);
 }
@@ -130,6 +132,7 @@ footer {
 }
 
 .intro-content {
+  color: var(--text-color);
   font-size: 1.75rem;
   letter-spacing: 1px;
   line-height: 35px;
@@ -154,6 +157,7 @@ footer {
 
 /* CONTACT SECTION */
 .section.contact-wrapper {
+  background-color: inherit;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
@@ -162,6 +166,7 @@ footer {
 }
 
 .card-item {
+  background-color: var(--bg-secondary);
   padding: 16px;
 }
 
