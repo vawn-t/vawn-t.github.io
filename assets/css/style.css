@@ -201,12 +201,6 @@ footer {
   grid-row: 4/6;
 }
 
-.card1 {
-}
-
-.card2 {
-}
-
 @media only screen and (max-width: 480px) {
   .scroll-wrapper {
     height: 100dvh;
