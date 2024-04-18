@@ -16,7 +16,7 @@
 }
 
 .section {
-	background-color: var(--white);
+	background-color: transparent;
 	flex-shrink: 0;
 }
 
@@ -212,6 +212,10 @@ footer {
 	width: 353px;
 	object-fit: cover;
 	border-radius: 20px;
+}
+
+.section-img.only-dark {
+	content: url('../images/personal/view-1/dark.png');
 }
 
 @media only screen and (max-width: 480px) {

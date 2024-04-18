@@ -11,60 +11,58 @@ let pointerInteractionMovement = 0;
 
 let canvas = document.getElementById('cobe');
 
-// TODO: Get current theme active
-// const themeActive = document.querySelector('.theme-active');
-
 const globe = createGlobe(canvas, {
-  devicePixelRatio: 2,
-  width: 1000,
-  height: 1000,
-  phi: 0,
-  theta: 0,
+	devicePixelRatio: 2,
+	width: 1000,
+	height: 1000,
+	phi: 0,
+	theta: 0,
+	diffuse: 1.2,
+	scale: 1,
+	mapSamples: 16000,
+	mapBrightness: 6,
+	baseColor: [1, 1, 1],
+	markerColor: [1, 0.5, 1],
+	glowColor: [1, 1, 1],
+	offset: [0, 0],
+	markers: [{ location: [15.969294, 108.195093], size: 0.04 }],
+	onRender: (state) => {
+		// Called on every animation frame.
+		// `state` will be an empty object, return updated params.
+		state.phi = phi + pointerInteractionMovement / 300;
+		phi += additionalPhi;
 
-  // TODO: Handle dark mode
-  dark: 0,
-  diffuse: 1.2,
-  scale: 1,
-  mapSamples: 16000,
-  mapBrightness: 6,
-  baseColor: [1, 1, 1],
-  markerColor: [1, 0.5, 1],
-  glowColor: [1, 1, 1],
-  offset: [0, 0],
-  markers: [{ location: [15.969294, 108.195093], size: 0.04 }],
-  onRender: (state) => {
-    // Called on every animation frame.
-    // `state` will be an empty object, return updated params.
-    state.phi = phi + pointerInteractionMovement / 300;
-    phi += additionalPhi;
-  }
+		// Handle dark theme
+		const lightTheme = document.body.classList.contains('light-theme');
+		state.dark = !!lightTheme ? 0 : 1;
+	}
 });
 
 const handlePointerDown = (e) => {
-  // stop auto rotate
-  additionalPhi = stoppingPhi;
+	// stop auto rotate
+	additionalPhi = stoppingPhi;
 
-  // get current pointer position
-  pointerInteract = e.clientX;
+	// get current pointer position
+	pointerInteract = e.clientX;
 
-  canvas.style.cursor = 'grabbing';
+	canvas.style.cursor = 'grabbing';
 };
 
 const handlePointerUp = () => {
-  additionalPhi = defaultPhi;
-  canvas.style.cursor = 'grab';
+	additionalPhi = defaultPhi;
+	canvas.style.cursor = 'grab';
 };
 
 const handlePointerOut = () => {
-  additionalPhi = defaultPhi;
-  canvas.style.cursor = 'auto';
+	additionalPhi = defaultPhi;
+	canvas.style.cursor = 'auto';
 };
 
 const handlePointerMove = (e) => {
-  canvas.style.cursor = 'grab';
-  if (e.buttons == 1) {
-    pointerInteractionMovement = e.clientX - pointerInteract;
-  }
+	canvas.style.cursor = 'grab';
+	if (e.buttons == 1) {
+		pointerInteractionMovement = e.clientX - pointerInteract;
+	}
 };
 
 canvas.addEventListener('pointerup', handlePointerUp);
