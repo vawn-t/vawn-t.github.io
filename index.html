@@ -2,189 +2,153 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>vawn - personal website</title>
-
-		<!-- Reset CSS -->
-		<link rel="stylesheet" href="assets/css/reset.css" />
-
-		<!-- Base CSS -->
-		<link rel="stylesheet" href="assets/css/base.css" />
-
-		<!-- Custom CSS -->
-		<link rel="stylesheet" href="assets/css/style.css" />
+		<title>vawn</title>
+		<link rel="stylesheet" href="./assets/css/style.css" />
 	</head>
-	<body class="light-theme">
-		<div class="scroll-wrapper">
-			<!-- SWITCH THEME BUTTON -->
-			<header class="box-center">
-				<nav class="switch-theme-wrapper">
-					<div class="switch-btn">
-						<a id="light-mode" href="#" class="theme-active">
-							<img
-								src="assets/images/icons/sun-enabled.svg"
-								alt="day icon"
-								srcset=""
-							/>
-						</a>
-						<a id="dark-mode" class="" href="#">
-							<img
-								src="assets/images/icons/moon-disabled.svg"
-								alt="night icon"
-								srcset=""
-							/>
-						</a>
-					</div>
-				</nav>
-			</header>
 
-			<!-- MAIN CONTENT -->
-			<main class="main-wrapper">
-				<section class="section primary-section">
-					<div class="vawn-wrapper">
-						<div class="vawn-info">
-							<img
-								class="vawn-img"
-								src="assets/images/personal/avatar.jpg"
-								alt=""
-							/>
-							<div class="vawn-title">
-								<h1 class="vawn-name">Vawn</h1>
-								<div class="vawn-status">
-									<span class="green-light"></span>
-									<p class="vawn-mode">Available</p>
-								</div>
-							</div>
-						</div>
-						<p class="intro-content">
-							Currently working as a front-end developer at AgilityIO.
-						</p>
-					</div>
-					<div class="info">
-						<p class="title">Based in Da Nang, Viet Nam <span>🇻🇳</span></p>
-						<span class="sub-title">UTC/GMT +7 hours</span>
-					</div>
-
-					<div class="global-wrapper">
-						<canvas
-							id="cobe"
-							style="width: 500px; height: 500px"
-							width="1000"
-							height="1000"
-						></canvas>
-					</div>
-				</section>
-				<section class="section contact-wrapper">
-					<a
-						rel="noopener"
-						href="https://www.linkedin.com/in/vawn/"
-						target="_blank"
-						class="card-item social linkedin"
-					>
-						<img
-							class="icon"
-							alt="linkedin icon"
-							src="/assets/icons/linkedin.svg"
-						/>
-						<div class="info">
-							<p class="title">@vawn</p>
-							<span class="sub-title">9999 connections</span>
-						</div>
-					</a>
-					<a
-						rel="noopener"
-						href="https://github.com/vawn-t"
-						target="_blank"
-						class="card-item social"
-					>
-						<img class="icon" alt="icon" src="/assets/icons/github.svg" />
-						<div class="info">
-							<p class="title">@vawn-t</p>
-						</div>
-					</a>
-					<a
-						rel="noopener"
-						href="https://app.codesignal.com/profile/vawn-t"
-						target="_blank"
-						class="card-item social"
-						><img class="icon" alt="icon" src="/assets/icons/code-fight.svg" />
-						<div class="info">
-							<p class="title">@vawn-t</p>
-						</div></a
-					>
-					<a
-						rel="noopener"
-						href="mailto:vantran99dn@gmail.com"
-						target="_blank"
-						class="card-item social email"
-						><img src="/assets/icons/email.svg" alt="email" class="icon" />
-						<div class="info">
-							<p class="title">vantran99dn@gmail.com</p>
-						</div>
-					</a>
-					<a
-						rel="noopener"
-						href="https://instagram.com/vawnnn?igshid=OGQ5ZDc2ODk2ZA=="
-						target="_blank"
-						class="card-item social instagram"
-						><img
-							class="icon"
-							alt="instagram icon"
-							src="/assets/icons/instagram.svg"
-						/>
-						<div class="info">
-							<p class="title">@vawnnn</p>
-						</div></a
-					>
-					<a
-						href="https://www.facebook.com/cVannwww"
-						target="_blank"
-						class="card-item social"
-					>
-						<img
-							class="icon"
-							alt="facebook icon"
-							src="/assets/icons/facebook.svg"
-						/>
-						<div class="info">
-							<p class="title">Văn</p>
-						</div>
-					</a>
-					<a
-						href="https://join.skype.com/invite/WDaGtVrcSb6g"
-						target="_blank"
-						class="card-item social"
-						rel="noopener"
-						><img class="icon" alt="icon" src="/assets/icons/skype.svg" />
-						<div class="info">
-							<p class="title">Van T.</p>
-						</div></a
-					>
-				</section>
-				<section class="section">
-					<img
-						class="section-img"
-						src="assets/images/personal/view-1/light.png"
-						alt="Section 1"
+	<body class="light">
+		<div class="theme-toggle">
+			<button id="themeToggle">
+				<svg
+					class="sun-icon"
+					viewBox="0 0 24 24"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z"
+						stroke="currentColor"
+						stroke-width="2"
 					/>
-				</section>
-				<section class="section">Section 4</section>
-				<section class="section">Section 5</section>
-				<section class="section">Section 6</section>
-			</main>
-
-			<!-- ADDITIONAL INFORMATION -->
-			<footer class="box-center">vawn</footer>
+					<path
+						d="M12 1V3M12 21V23M1 12H3M21 12H23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M18.36 5.64L19.78 4.22M4.22 19.78L5.64 18.36"
+						stroke="currentColor"
+						stroke-width="2"
+					/>
+				</svg>
+				<svg
+					class="moon-icon"
+					viewBox="0 0 24 24"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+						stroke="currentColor"
+						stroke-width="2"
+					/>
+				</svg>
+			</button>
 		</div>
 
-		<!-- Custom JS -->
-		<script src="assets/js/script.js"></script>
+		<main class="container">
+			<section class="section intro">
+				<h1>Hello, I'm<br /><span class="highlight">vawn</span></h1>
+				<p class="subtitle">Fullstack Developer</p>
+			</section>
 
-		<!-- Animation -->
-		<script type="module" src="assets/js/globe-animation.js"></script>
+			<section class="section about">
+				<h2>About Me</h2>
+				<p>
+					I craft digital experiences that combine beautiful design with clean,
+					efficient code. With over 5 years of experience in web development, I
+					specialize in creating responsive, user-friendly websites.
+				</p>
+			</section>
 
-		<!-- HTML inspector -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/html-inspector/0.8.2/html-inspector.js"></script>
+			<section class="section projects">
+				<h2>Projects</h2>
+				<div class="project-grid">
+					<article class="project-card">
+						<h3>Project One</h3>
+						<p>E-commerce website with modern UI</p>
+					</article>
+					<article class="project-card">
+						<h3>Project Two</h3>
+						<p>Portfolio website for photographer</p>
+					</article>
+					<article class="project-card">
+						<h3>Project Three</h3>
+						<p>Mobile-first web application</p>
+					</article>
+				</div>
+			</section>
+
+			<section class="section skills">
+				<h2>Skills & Expertise</h2>
+				<div class="skills-grid">
+					<div class="skill-card">
+						<h3>Language Proficiency</h3>
+						<div class="skill-item">
+							<div class="skill-name">
+								<span>English</span>
+								<span>Professional</span>
+							</div>
+							<div class="progress-bar">
+								<div class="progress-fill" style="width: 95%"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="skill-card">
+						<h3>Front-End Technologies</h3>
+						<div class="skill-item">
+							<div class="skill-name">
+								<span>HTML5/CSS3</span>
+								<span>Expert</span>
+							</div>
+							<div class="progress-bar">
+								<div class="progress-fill" style="width: 95%"></div>
+							</div>
+						</div>
+						<div class="skill-item">
+							<div class="skill-name">
+								<span>JavaScript</span>
+								<span>Advanced</span>
+							</div>
+							<div class="progress-bar">
+								<div class="progress-fill" style="width: 90%"></div>
+							</div>
+						</div>
+						<div class="skill-item">
+							<div class="skill-name">
+								<span>React</span>
+								<span>Intermediate</span>
+							</div>
+							<div class="progress-bar">
+								<div class="progress-fill" style="width: 80%"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="skill-card">
+						<h3>Development Goals</h3>
+						<div class="timeline">
+							<div class="timeline-item">
+								<h4>Current: Front-End Expert</h4>
+								<p>Mastering React, TypeScript, and modern CSS frameworks</p>
+							</div>
+							<div class="timeline-item">
+								<h4>2024: Backend Development</h4>
+								<p>Learning Node.js, Express, and RESTful APIs</p>
+							</div>
+							<div class="timeline-item">
+								<h4>2025: Database Systems</h4>
+								<p>MongoDB, PostgreSQL, and database design patterns</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section contact">
+				<h2>Get in Touch</h2>
+				<p>Let's work together on your next project.</p>
+				<a href="mailto:hello@example.com" class="cta-button">Contact Me</a>
+			</section>
+		</main>
+
+		<script type="module" src="/main.js"></script>
 	</body>
 </html>
