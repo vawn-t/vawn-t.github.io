@@ -90,27 +90,27 @@ if (window.innerWidth > 768) {
 	);
 
 	// Drag to scroll
-	container.addEventListener('mousedown', (e) => {
-		isScrolling = true;
-		startX = e.pageX - container.offsetLeft;
-		scrollLeft = container.scrollLeft;
-	});
+	// container.addEventListener('mousedown', (e) => {
+	// 	isScrolling = true;
+	// 	startX = e.pageX - container.offsetLeft;
+	// 	scrollLeft = container.scrollLeft;
+	// });
 
-	container.addEventListener('mouseleave', () => {
-		isScrolling = false;
-	});
+	// container.addEventListener('mouseleave', () => {
+	// 	isScrolling = false;
+	// });
 
-	container.addEventListener('mouseup', () => {
-		isScrolling = false;
-	});
+	// container.addEventListener('mouseup', () => {
+	// 	isScrolling = false;
+	// });
 
-	container.addEventListener('mousemove', (e) => {
-		if (!isScrolling) return;
-		e.preventDefault();
-		const x = e.pageX - container.offsetLeft;
-		const walk = (x - startX) * 2;
-		container.scrollLeft = scrollLeft - walk;
-	});
+	// container.addEventListener('mousemove', (e) => {
+	// 	if (!isScrolling) return;
+	// 	e.preventDefault();
+	// 	const x = e.pageX - container.offsetLeft;
+	// 	const walk = (x - startX) * 2;
+	// 	container.scrollLeft = scrollLeft - walk;
+	// });
 
 	// Touch events for mobile horizontal scroll
 	container.addEventListener(

@@ -22,19 +22,18 @@ const globe = createGlobe(canvas, {
 	mapSamples: 16000,
 	mapBrightness: 6,
 	baseColor: [1, 1, 1],
-	markerColor: [1, 0.5, 1],
+	markerColor: [0.39215686274509803, 0.4235294117647059, 1],
 	glowColor: [1, 1, 1],
 	offset: [0, 0],
-	markers: [{ location: [15.969294, 108.195093], size: 0.04 }],
+	markers: [{ location: [15.969294, 108.195093], size: 0.05 }],
 	onRender: (state) => {
 		// Called on every animation frame.
 		// `state` will be an empty object, return updated params.
 		state.phi = phi + pointerInteractionMovement / 300;
 		phi += additionalPhi;
 
-		// Handle dark theme
-		const lightTheme = document.body.classList.contains('light-theme');
-		state.dark = !!lightTheme ? 0 : 1;
+		const currentTheme = document.body.getAttribute('data-theme');
+		state.dark = currentTheme === 'light' ? 0 : 1;
 	}
 });
 

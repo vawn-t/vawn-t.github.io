@@ -1,0 +1,110 @@
+@font-face {
+	font-family: Figtree;
+	src: url(../assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+@font-face {
+	font-family: FigtreeItalic;
+	src: url(../assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+}
+
+/*------------------------*\
+ * VARIABLES
+\*------------------------*/
+
+:root {
+	/*
+    * typography
+    */
+	--ff-figtree: 'Figtree', serif;
+
+	--fs-1: 1.1rem;
+	--fs-2: 0.75rem;
+
+	--fw-400: 400;
+	--fw-500: 500;
+	--fw-600: 600;
+
+	/*
+    * radius
+    */
+	--radius-primary: 16px;
+	--radius-secondary: 24px;
+
+	color-scheme: light dark;
+
+	--primary-color: #ffc300;
+	--text-color: #213547;
+	--bg-color: #ffffff;
+	--card-bg: #f4f4f4;
+	--transition: all 0.3s ease;
+}
+
+[data-theme='dark'] {
+	--text-color: #ffffff;
+	--bg-color: #1a1a1a;
+	--card-bg: #2a2a2a;
+}
+
+* {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+	font-family: var(--ff-figtree);
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	transition: var(--transition);
+	height: 100vh;
+	font-size: var(--fs-1);
+}
+
+/*------------------------*\
+ * REUSE STYLES
+\*------------------------*/
+
+h1 {
+	font-size: 4rem;
+	line-height: 1.2;
+	margin-bottom: 1rem;
+	letter-spacing: calc(4rem * 0.12);
+}
+
+h2 {
+	font-size: 2.5rem;
+	line-height: 1.2;
+	margin-bottom: 1.5rem;
+	letter-spacing: calc(2.5rem * 0.08);
+}
+
+h3 {
+	font-size: 1.5rem;
+	line-height: 1.2;
+	margin-bottom: 0.8rem;
+	letter-spacing: calc(1.5rem * 0.08);
+}
+
+h4 {
+	font-size: 1.25rem;
+	line-height: 1.2;
+	margin-bottom: 0.5rem;
+	letter-spacing: calc(1.125rem * 0.06);
+}
+
+p {
+	line-height: 1.6;
+	letter-spacing: calc(1rem * 0.01);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}

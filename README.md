@@ -1,15 +1,19 @@
-<div align="center">
+# Vawn T. - Full-Stack Developer Portfolio
 
+Welcome to my portfolio repository! This project showcases my skills, experience, and development projects.
 
-  <br />
-  <br />
-  
+## 🌐 Live Site
 
+Visit my portfolio at [vawn-t.github.io](https://vawn-t.github.io/)
 
-  <h2 align="center">vawn - Personal portfolio</h2>
+## 🧑‍💻 About Me
 
-This website is fully responsive personal portfolio, <br />Responsive for all devices, built using HTML, CSS, and JavaScript.
+I am a passionate Full-Stack Developer with expertise in React, React Native, and Node.js. I focus on creating responsive, user-friendly applications with clean, maintainable code.
 
-<a href="https://vawn-t.github.io/"><strong>➥ Live Demo</strong></a>
+## 📫 Contact
 
-</div>
+Feel free to reach out to me:
+
+- Email: [vantran99dn@gmail.com](mailto:vantran99dn@gmail.com)
+- LinkedIn: [linkedin.com/in/vawn](https://www.linkedin.com/in/vawn/)
+- GitHub: [github.com/vawn-t](https://github.com/vawn-t)
