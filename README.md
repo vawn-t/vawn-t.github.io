@@ -14,6 +14,6 @@ I am a passionate Full-Stack Developer with expertise in React, React Native, an
 
 Feel free to reach out to me:
 
-- Email: [vantran99dn@gmail.com](mailto:vantran99dn@gmail.com)
+- Email: [vantc.99@gmail.com](mailto:vantc.99@gmail.com)
 - LinkedIn: [linkedin.com/in/vawn](https://www.linkedin.com/in/vawn/)
 - GitHub: [github.com/vawn-t](https://github.com/vawn-t)
