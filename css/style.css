@@ -13,6 +13,12 @@
 		overflow-y: hidden;
 		scroll-snap-type: x mandatory;
 		scroll-behavior: smooth;
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE/Edge */
+	}
+
+	.container::-webkit-scrollbar {
+		display: none; /* Chrome, Safari, Opera */
 	}
 
 	.section {
@@ -32,6 +38,12 @@
 		height: 100vh;
 		scroll-snap-points-y: repeat(100vh);
 		scroll-snap-type: y mandatory;
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE/Edge */
+	}
+
+	.container::-webkit-scrollbar {
+		display: none; /* Chrome, Safari, Opera */
 	}
 
 	.section {
@@ -377,3 +389,178 @@
 	background: var(--primary-color);
 	border-radius: 4px;
 }
+
+/**
+* ---------------------------------------------
+* Navigation Dots
+* --------------------------------------------- 
+*/
+.section-nav {
+	position: fixed;
+	bottom: 2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 0.75rem;
+	z-index: 1000;
+	padding: 0.75rem 1rem;
+	background: var(--card-bg);
+	border-radius: var(--radius-secondary);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-dot {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	border: 2px solid var(--primary-color);
+	background: transparent;
+	cursor: pointer;
+	transition: var(--transition);
+	padding: 0;
+}
+
+.nav-dot:hover {
+	background: var(--primary-color);
+	opacity: 0.7;
+}
+
+.nav-dot.active {
+	background: var(--primary-color);
+	transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+	.section-nav {
+		right: 1rem;
+		bottom: 50%;
+		left: auto;
+		transform: translateY(50%);
+		flex-direction: column;
+		padding: 0.75rem 0.5rem;
+	}
+}
+
+/**
+* ---------------------------------------------
+* Resume Button
+* --------------------------------------------- 
+*/
+.resume-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-top: 1.5rem;
+	padding: 0.75rem 1.5rem;
+	background: transparent;
+	border: 2px solid var(--primary-color);
+	color: var(--text-color);
+	border-radius: var(--radius-primary);
+	font-size: var(--fs-1);
+	font-weight: var(--fw-500);
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.resume-btn:hover {
+	background: var(--primary-color);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(255, 195, 0, 0.3);
+}
+
+.resume-btn svg {
+	transition: var(--transition);
+}
+
+.resume-btn:hover svg {
+	transform: translateY(2px);
+}
+
+/**
+* ---------------------------------------------
+* Tech Stack Badges
+* --------------------------------------------- 
+*/
+.tech-stack {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-top: 1rem;
+}
+
+.tech-badge {
+	display: inline-block;
+	padding: 0.25rem 0.75rem;
+	background: var(--bg-color);
+	color: var(--text-color);
+	border-radius: 2rem;
+	font-size: 0.75rem;
+	font-weight: var(--fw-500);
+	border: 1px solid var(--primary-color);
+	transition: var(--transition);
+}
+
+.tech-badge:hover {
+	background: var(--primary-color);
+	transform: translateY(-1px);
+}
+
+/**
+* ---------------------------------------------
+* Section Entrance Animations
+* --------------------------------------------- 
+*/
+.section-content {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-content.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+	.section-content {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+	
+	.nav-dot,
+	.resume-btn,
+	.tech-badge,
+	.project-card,
+	.socialContainer {
+		transition: none;
+	}
+}
+
+/**
+* ---------------------------------------------
+* Enhanced Micro-interactions
+* --------------------------------------------- 
+*/
+.project-card {
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.socialContainer {
+	border-radius: 50%;
+}
+
+.socialContainer:hover {
+	transform: scale(1.1);
+}
+
+.contactButton:hover .iconButton {
+	transform: translateX(3px);
+}
+

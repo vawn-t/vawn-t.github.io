@@ -91,10 +91,27 @@
 			</button>
 		</div>
 
+		<!-- Navigation dots -->
+		<nav class="section-nav" aria-label="Section navigation">
+			<button class="nav-dot active" data-section="0" aria-label="Go to Intro section"></button>
+			<button class="nav-dot" data-section="1" aria-label="Go to About section"></button>
+			<button class="nav-dot" data-section="2" aria-label="Go to Projects section"></button>
+			<button class="nav-dot" data-section="3" aria-label="Go to Skills section"></button>
+			<button class="nav-dot" data-section="4" aria-label="Go to Contact section"></button>
+		</nav>
+
 		<div id="main-content" class="container">
 			<section class="section intro">
-				<h1>Hello, I'm<br /><span class="highlight">vawn</span></h1>
-				<p class="subtitle">A Full-Stack Developer</p>
+				<div class="section-content visible">
+					<h1>Hello, I'm<br /><span class="highlight">vawn</span></h1>
+					<p class="subtitle">A Full-Stack Developer</p>
+					<a href="./docs/vawn.pdf" download class="resume-btn">
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<path d="M12 16L12 8M12 16L8 12M12 16L16 12M4 20H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						Download CV
+					</a>
+				</div>
 				<div class="global-wrapper">
 					<canvas
 						id="cobe"
@@ -137,6 +154,9 @@
 								A parent investment app designed for a child's first account,
 								allowing contributions from family and friends.
 							</p>
+							<div class="tech-stack">
+								<span class="tech-badge">Webflow</span>
+							</div>
 						</a>
 					</article>
 
@@ -149,6 +169,11 @@
 								calculates costs, nutrition, and manages owner-level
 								permissions.
 							</p>
+							<div class="tech-stack">
+								<span class="tech-badge">React</span>
+								<span class="tech-badge">TypeScript</span>
+								<span class="tech-badge">Redux</span>
+							</div>
 						</div>
 					</article>
 
@@ -159,6 +184,14 @@
 								A white-label business banking application integrating with top
 								Banking-as-a-Service (BaaS) platforms.
 							</p>
+							<div class="tech-stack">
+								<span class="tech-badge">React</span>
+								<span class="tech-badge">React Native</span>
+								<span class="tech-badge">React Query</span>
+								<span class="tech-badge">Zustand</span>
+								<span class="tech-badge">NX</span>
+								
+							</div>
 						</div>
 					</article>
 
@@ -166,6 +199,13 @@
 						<div class="project-content">
 							<h3>Moniflow</h3>
 							<p>A mobile banking app built as an extension of Agility Kash.</p>
+							<div class="tech-stack">
+								<span class="tech-badge">React Native</span>
+								<span class="tech-badge">TypeScript</span>
+								<span class="tech-badge">React Query</span>
+								<span class="tech-badge">Zustand</span>
+								<span class="tech-badge">NX</span>
+							</div>
 						</div>
 					</article>
 
@@ -181,6 +221,10 @@
 								More than just a gaming news platform Donggames includes gaming
 								tournament and a game figure shop.
 							</p>
+							<div class="tech-stack">
+								<span class="tech-badge">Next.js</span>
+								<span class="tech-badge">TypeScript</span>
+							</div>
 						</a>
 					</article>
 				</div>
@@ -381,7 +425,7 @@
 		</div>
 
 		<!-- Base JS -->
-		<script type="module" src="js/main.js" defer></script>
+		<script src="js/main.js" defer></script>
 
 		<!-- Animation -->
 		<script type="module" src="js/globe-animation.js" defer></script>

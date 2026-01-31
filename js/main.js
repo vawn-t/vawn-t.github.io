@@ -137,16 +137,88 @@ if (window.innerWidth > 768) {
 // Fix the sections variable reference issue
 // Use a conditional check to prevent errors if sections don't exist
 const sections = document.querySelectorAll('.section');
+const navDots = document.querySelectorAll('.nav-dot');
 
-// Handle resize events for responsive behavior only if sections exist
-if (sections.length > 0) {
-	window.addEventListener('resize', () => {
-		const isDesktop = window.innerWidth > 768;
-
-		sections.forEach((section) => {
-			section.style.transform = isDesktop
-				? 'translateX(50px)'
-				: 'translateY(50px)';
-		});
+// Navigation dots functionality
+function updateActiveDot(index) {
+	navDots.forEach((dot, i) => {
+		dot.classList.toggle('active', i === index);
 	});
 }
+
+// Click handler for navigation dots
+navDots.forEach((dot) => {
+	dot.addEventListener('click', () => {
+		const sectionIndex = parseInt(dot.dataset.section);
+		const targetSection = sections[sectionIndex];
+		
+		if (targetSection && container) {
+			const isDesktop = window.innerWidth > 768;
+			
+			if (isDesktop) {
+				container.scrollTo({
+					left: sectionIndex * window.innerWidth,
+					behavior: 'smooth'
+				});
+			} else {
+				targetSection.scrollIntoView({ behavior: 'smooth' });
+			}
+		}
+	});
+});
+
+// Track scroll position and update active dot
+function handleScrollUpdate() {
+	if (!container) return;
+	
+	const isDesktop = window.innerWidth > 768;
+	let currentIndex = 0;
+	
+	if (isDesktop) {
+		currentIndex = Math.round(container.scrollLeft / window.innerWidth);
+	} else {
+		sections.forEach((section, index) => {
+			const rect = section.getBoundingClientRect();
+			if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+				currentIndex = index;
+			}
+		});
+	}
+	
+	updateActiveDot(currentIndex);
+}
+
+// Add scroll listener for nav dot updates
+if (container) {
+	container.addEventListener('scroll', handleScrollUpdate, { passive: true });
+}
+
+// Section content reveal animation
+const sectionContents = document.querySelectorAll('.section-content');
+
+if (sectionContents.length > 0 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+	const revealObserver = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('visible');
+				}
+			});
+		},
+		{ threshold: 0.2 }
+	);
+
+	sectionContents.forEach((content) => {
+		revealObserver.observe(content);
+	});
+} else {
+	// If reduced motion or no elements, make all visible
+	sectionContents.forEach((content) => {
+		content.classList.add('visible');
+	});
+}
+
+// Initial call to set active dot
+handleScrollUpdate();
+
+
