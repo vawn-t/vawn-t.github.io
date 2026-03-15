@@ -1041,40 +1041,6 @@ ul { list-style: none; }
   box-shadow: 0 15px 40px rgba(131,67,67,0.2);
 }
 
-/* Mobile responsivity */
-@media (max-width: 768px) {
-  .gallery-editorial__top {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  .gallery-editorial__poem {
-    transform: rotate(0);
-    text-align: center;
-  }
-  .gallery-editorial__love-block {
-    align-items: center;
-  }
-  .gallery-editorial__divider-v {
-    margin-left: 0;
-  }
-  .gallery-editorial__small-serif {
-    text-align: center;
-  }
-  .gallery-editorial__right figure:nth-child(1),
-  .gallery-editorial__right figure:nth-child(2),
-  .gallery-editorial__right figure:nth-child(3) {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    transform: rotate(0) !important;
-  }
-  .gallery-editorial__left-images figure:first-child,
-  .gallery-editorial__left-images figure:last-child {
-    transform: translateY(0) rotate(0) !important;
-  }
-}
-
-
-
 /* ── QR GIFT SECTION ───────────────────────────── */
 .qr-gift__desc {
   font-family: var(--font-serif);
