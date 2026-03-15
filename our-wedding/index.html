@@ -70,7 +70,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Pinyon+Script&family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
       rel="stylesheet"
     />
 
@@ -293,7 +293,7 @@
                 Lô 1,2 - Đường 2/9 - Hòa Cường Bắc, Hải Châu, TP. Đà Nẵng
               </address>
               <a
-                href="https://maps.google.com/?q=Golden+Phoenix+Da+Nang+Duong+2-9"
+                href="https://maps.app.goo.gl/ywH7FfvkvhSxMMxz5"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="event-card__map-link"
@@ -333,41 +333,45 @@
         </div>
       </section>
 
-      <!-- ── SWEET WEDDING GALLERY (vertical, 6 images) ── -->
-      <!-- [CHANGE 2] New vertical photo gallery section -->
-      <section class="section gallery reveal" aria-label="Sweet wedding gallery">
+      <!-- ── SWEET WEDDING GALLERY ── -->
+      <section class="section reveal" aria-label="Sweet wedding gallery">
         <h2 class="section__title">Sweet Wedding</h2>
-        <!-- Masonry editorial grid: 1 hero + 2-col + 3-col rows -->
-        <div class="gallery__grid">
-          <!-- Row A: Full-width hero -->
-          <figure class="gallery__item gallery__item--hero reveal">
-            <img src="https://res.cloudinary.com/drwsfgt0t/image/upload/v1773503329/wedding-images/photo-1_qmcncv.png" alt="Couple walking in flower garden at golden hour" loading="lazy" />
-            <figcaption class="gallery__caption">Golden Hour</figcaption>
-          </figure>
+        
+        <div class="gallery-editorial">
+          <div class="gallery-editorial__music-note" aria-hidden="true">&#9835;</div>
+          
+          <div class="gallery-editorial__top">
+            <!-- Left column: Text & 2 Images -->
+            <div class="gallery-editorial__left">
+              <p class="gallery-editorial__poem">
+                Cảm ơn vì đã đến, đã ở lại và đã chọn anh làm ngoại lệ của đời mình.<br/>
+              </p>
+              
+              <div class="gallery-editorial__love-block">
+                <span class="gallery-editorial__love-text">LOVE</span>
+                <div class="gallery-editorial__divider-v"></div>
+                <span class="gallery-editorial__small-serif">You are my today and all of my tomorrows.</span>
+              </div>
+              
+              <div class="gallery-editorial__left-images">
+                <figure class="reveal"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=400&auto=format&fit=crop" alt="Wedding placeholder 1" loading="lazy"></figure>
+                <figure class="reveal"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=400&auto=format&fit=crop" alt="Wedding placeholder 2" loading="lazy"></figure>
+              </div>
+            </div>
 
-          <!-- Row B: Left tall + Right stacked -->
-          <figure class="gallery__item gallery__item--tall-left reveal">
-            <img src="https://res.cloudinary.com/drwsfgt0t/image/upload/v1773503332/wedding-images/photo-2_pajkny.png" alt="Bride holding bouquet of roses" loading="lazy" />
-          </figure>
-          <figure class="gallery__item gallery__item--top-right reveal">
-            <img src="https://res.cloudinary.com/drwsfgt0t/image/upload/v1773503330/wedding-images/photo-3_eijyqr.png" alt="Wedding rings close up" loading="lazy" />
-            <figcaption class="gallery__caption">Vĩnh Cửu</figcaption>
-          </figure>
-          <figure class="gallery__item gallery__item--bottom-right reveal">
-            <img src="https://res.cloudinary.com/drwsfgt0t/image/upload/v1773503331/wedding-images/photo-4_pk7nmb.png" alt="Couple's first dance under string lights" loading="lazy" />
-          </figure>
-
-          <!-- Row C: Three columns -->
-          <figure class="gallery__item gallery__item--col3 reveal">
-            <img src="https://res.cloudinary.com/drwsfgt0t/image/upload/v1773503331/wedding-images/photo-5_pon6y0.png" alt="Romantic sunset silhouette" loading="lazy" />
-            <figcaption class="gallery__caption">Hoàng Hôn</figcaption>
-          </figure>
-          <figure class="gallery__item gallery__item--col3 gallery__item--col3-wide reveal">
-            <img src="https://res.cloudinary.com/drwsfgt0t/image/upload/v1773503330/wedding-images/photo-6_ebpidb.png" alt="Groom smiling in garden" loading="lazy" />
-          </figure>
-          <figure class="gallery__item gallery__item--col3 reveal">
-            <img src="https://res.cloudinary.com/drwsfgt0t/image/upload/v1773503331/wedding-images/photo-4_pk7nmb.png" alt="Dance floor" loading="lazy" />
-          </figure>
+            <!-- Right column: 3 Images stacked -->
+            <div class="gallery-editorial__right">
+              <figure class="reveal"><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=400&auto=format&fit=crop" alt="Wedding placeholder 3" loading="lazy"></figure>
+              <figure class="reveal"><img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=400&auto=format&fit=crop" alt="Wedding placeholder 4" loading="lazy"></figure>
+              <figure class="reveal"><img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?q=80&w=400&auto=format&fit=crop" alt="Wedding placeholder 5" loading="lazy"></figure>
+              <p class="gallery-editorial__right-footer">Love and freedom</p>
+            </div>
+          </div>
+          
+          <!-- Bottom column: 1 Wide image spanning both -->
+          <div class="gallery-editorial__bottom reveal">
+            <figure><img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=800&auto=format&fit=crop" alt="Wedding placeholder 6 wide" loading="lazy"></figure>
+          </div>
         </div>
       </section>
 
