@@ -442,19 +442,28 @@
       <!-- ── GIFT / QR CODE ─────────── -->
       <!-- [CHANGE 5] New QR gift section -->
       <section class="section qr-gift reveal" aria-label="Wedding gift QR code">
-        <h2 class="section__title">Gửi Quà Mừng</h2>
+        <h2 class="section__title">Mừng Hạnh Phúc</h2>
         <p class="qr-gift__desc">
-          Sự hiện diện của bạn là món quà quý giá nhất với chúng tôi.<br />
-          Nếu bạn muốn gửi thêm lời chúc qua quà tặng, vui lòng quét mã bên dưới.
+          Hạnh phúc lớn nhất của chúng mình là sự hiện diện và những lời chúc chân thành từ  bạn.
+          Nếu bạn muốn chia sẻ thêm niềm vui bằng một món quà nhỏ, chúng mình xin trân trọng gửi đến bạn thông tin dưới đây. <br /><br />
+          Cảm ơn bạn vì đã luôn yêu thương Văn & Ly!
         </p>
-        <div class="qr-gift__card">
-          <img
-            src="https://res.cloudinary.com/drwsfgt0t/image/upload/v1773503564/wedding-images/IMG_7761_qfmf5x.jpg"
-            alt="QR code để chuyển khoản tặng quà cưới"
-            class="qr-gift__image"
-            loading="lazy"
-          />
-          <p class="qr-gift__note">Quét để chuyển khoản</p>
+        <div class="qr-gift__card" id="qr-gift-card">
+          <div class="qr-gift__image-wrapper">
+            <img
+              src="https://res.cloudinary.com/drwsfgt0t/image/upload/v1773669484/wedding-images/IMG_8065_qz5grm.jpg"
+              alt="QR code để chuyển khoản tặng quà cưới"
+              class="qr-gift__image qr-gift__image--hidden"
+              id="qr-gift-img"
+              loading="lazy"
+            />
+            <button class="qr-gift__overlay" id="qr-gift-btn" aria-label="Nhấn để xem mã QR">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" class="qr-gift__icon">
+                 <path d="M4 4H10V10H4V4ZM14 4H20V10H14V4ZM4 14H10V20H4V14ZM14 14H17V17H14V14ZM17 17H20V20H17V17ZM17 14H20V17H17V14ZM14 17H17V20H14V17ZM6 6V8H8V6H6ZM16 6V8H18V6H16ZM6 16V18H8V16H6Z" fill="currentColor"/>
+              </svg>
+              <span>Nhấn để xem</span>
+            </button>
+          </div>
         </div>
       </section>
 

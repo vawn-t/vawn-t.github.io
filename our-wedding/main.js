@@ -231,6 +231,21 @@ function getIconForDoc(docId) {
   });
 })();
 
+// ── QR Gift Toggle ──────────────────────────────────
+(function initQRToggle() {
+  const qrBtn = document.getElementById("qr-gift-btn");
+  const qrImg = document.getElementById("qr-gift-img");
+
+  if (!qrBtn || !qrImg) return;
+
+  qrBtn.addEventListener("click", () => {
+    qrImg.classList.remove("qr-gift__image--hidden");
+    qrBtn.classList.add("qr-gift__overlay--hidden");
+    // Optionally focus image or update ARIA
+    qrBtn.setAttribute("aria-expanded", "true");
+  });
+})();
+
 // ── Guestbook ───────────────────────────────────────
 const form          = document.getElementById("guestbook-form");
 const submitBtn     = document.getElementById("submit-btn");
