@@ -1032,6 +1032,7 @@ ul { list-style: none; }
   height: 100%;
   object-fit: cover;
   display: block;
+  object-position: bottom;
 }
 
 /* Hover fx */
