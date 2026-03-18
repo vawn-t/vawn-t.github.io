@@ -376,3 +376,77 @@ if (form) {
     }
   });
 }
+
+// ── Background Music ─────────────────────────────────
+(function initMusic() {
+  const audio = document.getElementById("bg-music-audio");
+  const playerBtn = document.getElementById("bg-music-player");
+  if (!audio || !playerBtn) return;
+
+  let isPlaying = false;
+  let hasInteracted = false;
+
+  // Set low volume for background music if desired
+  audio.volume = 0.5;
+
+  function attemptPlay() {
+    if (hasInteracted) return;
+    
+    audio.play().then(() => {
+      hasInteracted = true;
+      isPlaying = true;
+      playerBtn.classList.add("is-playing");
+      playerBtn.setAttribute("aria-label", "Pause Background Music");
+    }).catch(() => {
+      // Autoplay blocked
+      isPlaying = false;
+    });
+
+    ['click', 'touchstart', 'scroll', 'keydown'].forEach(evt => 
+      document.removeEventListener(evt, attemptPlay)
+    );
+  }
+
+  // Attempt to play immediately
+  const playPromise = audio.play();
+  if (playPromise !== undefined) {
+    playPromise.then(() => {
+      isPlaying = true;
+      hasInteracted = true;
+      playerBtn.classList.add("is-playing");
+      playerBtn.setAttribute("aria-label", "Pause Background Music");
+    }).catch(error => {
+      // Autoplay was prevented, add fallback listeners
+      ['click', 'touchstart', 'scroll', 'keydown'].forEach(evt => 
+        document.addEventListener(evt, attemptPlay, { once: true, passive: true })
+      );
+    });
+  }
+
+  // Toggle music when clicking the disk
+  playerBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    hasInteracted = true;
+
+    if (isPlaying) {
+      audio.pause();
+      playerBtn.classList.remove("is-playing");
+      playerBtn.setAttribute("aria-label", "Play Background Music");
+      isPlaying = false;
+    } else {
+      audio.play().then(() => {
+        playerBtn.classList.add("is-playing");
+        playerBtn.setAttribute("aria-label", "Pause Background Music");
+        isPlaying = true;
+      }).catch(err => console.error("Could not play audio:", err));
+    }
+  });
+
+  // Keyboard toggle
+  playerBtn.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      playerBtn.click();
+    }
+  });
+})();
