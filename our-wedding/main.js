@@ -231,18 +231,34 @@ function getIconForDoc(docId) {
   });
 })();
 
-// ── QR Gift Toggle ──────────────────────────────────
+// ── QR Gift Toggle (with time-based click gate) ────
 (function initQRToggle() {
+  const UNLOCK_TIME = new Date("2026-04-26T00:00:00+07:00").getTime();
+
   const qrBtn = document.getElementById("qr-gift-btn");
   const qrImg = document.getElementById("qr-gift-img");
 
   if (!qrBtn || !qrImg) return;
 
   qrBtn.addEventListener("click", () => {
-    qrImg.classList.remove("qr-gift__image--hidden");
-    qrBtn.classList.add("qr-gift__overlay--hidden");
-    // Optionally focus image or update ARIA
-    qrBtn.setAttribute("aria-expanded", "true");
+    if (Date.now() >= UNLOCK_TIME) {
+      // ── Unlocked: reveal QR as normal ────────────
+      qrImg.classList.remove("qr-gift__image--hidden");
+      qrBtn.classList.add("qr-gift__overlay--hidden");
+      qrBtn.setAttribute("aria-expanded", "true");
+    } else {
+      // ── Still locked: swap overlay to lock message ─
+      qrBtn.innerHTML = `
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" class="qr-gift__icon">
+          <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M8 11V7a4 4 0 0 1 8 0v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
+        </svg>
+        <span>00:00 · 26.04.2026</span>
+      `;
+      qrBtn.classList.add("qr-gift__overlay--locked");
+      qrBtn.setAttribute("aria-label", "Sẽ mở lúc 00:00 ngày 26.04.2026");
+    }
   });
 })();
 

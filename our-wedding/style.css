@@ -1138,6 +1138,13 @@ ul { list-style: none; }
   pointer-events: none;
 }
 
+.qr-gift__overlay--locked {
+  background: rgba(253, 245, 235, 0.88);
+  color: var(--maroon);
+  cursor: default;
+  gap: 0.6rem;
+}
+
 .qr-gift__icon {
   width: 28px;
   height: 28px;
