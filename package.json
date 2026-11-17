@@ -1,0 +1,13 @@
+{
+  "name": "vawn-portfolio-qa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Browser regression tests for the static portfolio",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.61.1"
+  }
+}
